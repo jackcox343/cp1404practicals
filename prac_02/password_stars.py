@@ -1,7 +1,20 @@
-PASSWORD = "Pythonista"
-password = input("Password: ")
-while len(password) < len(PASSWORD):
-    print("Password doesnt meet minimum length.")
+def main():
+    PASSWORD = "Pythonista"
+    password = get_password(PASSWORD)
+    print_asterisk(password)
+
+
+def get_password(PASSWORD):
     password = input("Password: ")
-for i in range(0, len(password), 1):
-    print("*", end="")
+    while len(password) < len(PASSWORD):
+        print("Password doesnt meet minimum length.")
+        password = input("Password: ")
+    return password
+
+
+def print_asterisk(password):
+    for i in range(0, len(password), 1):
+        print("*", end="")
+
+
+main()
