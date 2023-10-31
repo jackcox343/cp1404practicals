@@ -1,6 +1,6 @@
 """
 Guitar test
-Estimate: 30 mins
+Estimate: 30 min
 Actual: 30 mins
 """
 from prac_06.guitar import Guitar

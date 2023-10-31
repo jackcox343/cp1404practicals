@@ -1,7 +1,7 @@
 """
 Guitar
 Estimate: 60 mins
-Actual: 60 mins
+Actual: 60 min
 """
 
 

@@ -1,7 +1,7 @@
 """
 Programming language
 Estimate: 30 mins
-Actual: 60 mins
+Actual: 60 min
 """
 
 
