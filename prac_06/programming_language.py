@@ -15,4 +15,4 @@ class ProgrammingLanguage:
         self.year = year
 
     def __str__(self):
-        return f"{self.field}, {self.typing}, {self.reflection}, First appeared in 1999"
+        return f"{self.field}, {self.typing} Typing, Reflection={self.reflection}, First appeared in 1999"
