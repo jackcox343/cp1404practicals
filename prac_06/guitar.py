@@ -1,7 +1,7 @@
 """
 Guitar
 Estimate: 60 mins
-Actual:
+Actual: 60 mins
 """
 
 
@@ -16,7 +16,7 @@ class Guitar:
 
     def __str__(self):
         """Returns string of guitar information"""
-        return f"{self.name} {self.year} : {self.cost}"
+        return f"{self.name} ({self.year}) : {self.cost}"
 
     def get_age(self, current_year=2023):
         """returns age of guitar"""
