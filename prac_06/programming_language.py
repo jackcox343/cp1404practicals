@@ -20,6 +20,7 @@ class ProgrammingLanguage:
         return f"{self.field}, {self.typing} Typing, Reflection={self.reflection}, First appeared in 1999"
 
     def is_dynamic(self):
+        """Checks to see if dynamic"""
         if self.typing == "Dynamic":
             return True
         else:
