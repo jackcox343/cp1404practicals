@@ -1,7 +1,7 @@
 """
 languages
 Estimate: 50 mins
-Actual:
+Actual: 60 mins
 """
 from prac_06.programming_language import ProgrammingLanguage
 
