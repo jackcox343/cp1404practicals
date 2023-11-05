@@ -5,12 +5,19 @@ FILENAME = "guitars.csv"
 
 def main():
     FILENAME = "guitars.csv"
-
     guitars = read_guitars(FILENAME)
 
     get_new_guitars(guitars)
+    write_guitars_to_file(FILENAME, guitars)
     guitars.sort()
     display_guitars(guitars)
+
+
+def write_guitars_to_file(FILENAME, guitars):
+    """This function will write guitar to file"""
+    with open(FILENAME, "w") as file:
+        for guitar in guitars:
+            file.write(str(guitar) + "\n")
 
 
 def get_new_guitars(guitars):
@@ -21,6 +28,7 @@ def get_new_guitars(guitars):
         cost = float(input("Cost: "))
         new_guitar = Guitar(name, year, cost)
         guitars.append(new_guitar)
+        name = input("Guitar name: ")
 
 
 def read_guitars(FILENAME):
