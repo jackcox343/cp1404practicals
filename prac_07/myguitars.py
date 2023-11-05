@@ -11,6 +11,7 @@ def main():
 
 
 def read_guitars(FILENAME):
+    """This function reads file to list"""
     guitars = []
     with open(FILENAME, "r") as file:
         for line in file:
@@ -26,6 +27,7 @@ def read_guitars(FILENAME):
 
 
 def display_guitars(guitars):
+    """This function displays guitars line by line"""
     for guitar in guitars:
         print(guitar)
 
