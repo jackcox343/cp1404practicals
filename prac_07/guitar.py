@@ -1,3 +1,10 @@
+"""
+Guitar
+Estimate: 30 mins
+Actual:
+"""
+
+
 class Guitar:
     """Class for guitar to store guitars"""
 
@@ -10,6 +17,10 @@ class Guitar:
     def __str__(self):
         """Returns string of guitar information"""
         return f"{self.name} ({self.year}) : {self.cost}"
+
+    def __lt__(self, other):
+        """Compares objects based off year"""
+        return self.year < other.year
 
     def get_age(self, current_year=2023):
         """returns age of guitar"""
