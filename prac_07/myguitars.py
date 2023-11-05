@@ -6,6 +6,7 @@ FILENAME = "guitars.csv"
 def main():
     FILENAME = "guitars.csv"
     guitars = read_guitars(FILENAME)
+    guitars.sort()
     display_guitars(guitars)
 
 
