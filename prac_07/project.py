@@ -13,3 +13,5 @@ class Project:
         self.priority = priority
         self.completion = completion
 
+    def __str__(self):
+        return f"Name: {self.name} Start date: {self.start_date} End date: {self.end_date} Priority: {self.priority} Completion: {self.completion}"
