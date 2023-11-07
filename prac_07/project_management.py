@@ -14,18 +14,27 @@ def main():
             load_project(filename)
         elif choice == "s":
             filename = input("Enter filename to save: ")
-
             save_projects(projects, filename)
         elif choice == "d":
-            pass
+            display_projects(projects)
         elif choice == "f":
-            pass
+            date = input("Show projects that start after date (dd/mm/yy): ")
+
         elif choice == "a":
             pass
         elif choice == "u":
             pass
         else:
             print("Invalid input")
+
+
+def display_projects(projects):
+    print("Incomplete projects")
+    incomplete_project = [project for project in projects if project.completion < 100]
+    print(incomplete_project)
+    print("Completed Projects")
+    completed_project = [project for project in projects if project.completion == 100]
+    print(completed_project)
 
 
 def save_projects(filename, projects):
