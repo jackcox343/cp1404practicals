@@ -19,13 +19,29 @@ def main():
             display_projects(projects)
         elif choice == "f":
             date = input("Show projects that start after date (dd/mm/yy): ")
-
+            start_date = datetime.strptime(date, "%d/%m/%y").date()
+            filter_projects(projects, start_date)
         elif choice == "a":
-            pass
+            add_project(projects)
         elif choice == "u":
             pass
         else:
             print("Invalid input")
+
+
+def add_project(projects):
+    name = input("Name: ")
+    date = input("Start date (dd/mm/yy): ")
+    start_date = datetime.strptime(date, "%d/%m/%y").date()
+    priority = int(input("Priority: "))
+    cost_estimate = float(input("Cost Estimate:"))
+    completion = int(input("Percentage complete: "))
+    projects.append((Project(name, start_date, priority, cost_estimate, completion)))
+
+
+def filter_projects(projects, start_date):
+    filtered_dates = [project for project in projects if start_date > project.end_date]
+    print(filtered_dates)
 
 
 def display_projects(projects):
