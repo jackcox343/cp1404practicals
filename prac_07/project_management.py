@@ -24,9 +24,23 @@ def main():
         elif choice == "a":
             add_project(projects)
         elif choice == "u":
-            pass
+            projects = update_project(projects)
         else:
             print("Invalid input")
+
+
+def update_project(projects):
+    display_projects(projects)
+    project_choice = int(input("Project Choice: "))
+    if project_choice < len(projects):
+        projects = projects[project_choice]
+        new_completion = input("New Percentage: ")
+        if new_completion:
+            projects.completion = int(new_completion)
+        new_priority = input("New Priority")
+        if new_priority:
+            projects.priority = int(new_priority)
+    return projects
 
 
 def add_project(projects):
