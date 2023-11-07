@@ -6,7 +6,6 @@ FILENAME = "guitars.csv"
 def main():
     FILENAME = "guitars.csv"
     guitars = read_guitars(FILENAME)
-
     get_new_guitars(guitars)
     write_guitars_to_file(FILENAME, guitars)
     guitars.sort()
