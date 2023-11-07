@@ -2,10 +2,36 @@ from prac_07.project import Project
 from datetime import datetime
 
 FILENAME = "projects.txt"
+MENU = "- (L)oad projects\n- (S)ave projects\n- (D)isplay projects\n- (F)ilter projects by date\n- (A)dd new project\n- (U)pdate project\n- (Q)uit"
 
 
 def main():
-    load_project(FILENAME)
+    projects = []
+    choice = input(">>> ").lower()
+    while choice != "q":
+        if choice == "l":
+            filename = input("Enter filename to load: ")
+            load_project(filename)
+        elif choice == "s":
+            filename = input("Enter filename to save: ")
+
+            save_projects(projects, filename)
+        elif choice == "d":
+            pass
+        elif choice == "f":
+            pass
+        elif choice == "a":
+            pass
+        elif choice == "u":
+            pass
+        else:
+            print("Invalid input")
+
+
+def save_projects(filename, projects):
+    with open(filename, 'w') as out_file:
+        for project in projects:
+            out_file.write(f"{project}\n")
 
 
 def load_project(filename):
