@@ -16,13 +16,16 @@ class ConvertMilesApp(App):
         return self.root
 
     def handle_calculate(self):
-        value = float(self.root.ids.input_miles.text)
+        value = self.get_valid_miles()
         result = value * MILES_TO_KILOMETRES
         self.root.ids.output_label.text = str(result)
 
-    # def get_valid_miles(self):
-    #     try:
-    #         value = f
+    def get_valid_miles(self):
+        try:
+            value = float(self.root.ids.input_miles.text)
+            return value
+        except ValueError:
+            return 0
 
 
 
