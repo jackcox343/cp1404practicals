@@ -27,6 +27,10 @@ class ConvertMilesApp(App):
         except ValueError:
             return 0
 
+    def handle_increment(self,change):
+        value = self.get_valid_miles() + change
+        self.root.ids.input_miles.text = str(value)
+        self.handle_calculate()
 
 
 ConvertMilesApp().run()
