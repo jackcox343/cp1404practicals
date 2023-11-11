@@ -5,13 +5,14 @@ Actual: 60 mins
 """
 from kivy.app import App
 from kivy.lang import Builder
+from kivy.properties import StringProperty
 
 MILES_TO_KILOMETRES = 1.60934
 
 
 class ConvertMilesApp(App):
     """This a class for miles conversion app"""
-
+    status_text = StringProperty()
     def build(self):
         """This function builds loaded file"""
         self.title = "Convert Miles to Kilometres"
