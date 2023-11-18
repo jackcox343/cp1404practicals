@@ -18,5 +18,9 @@ def main():
             choice = input("q)uit, c)hoose taxi, d)rive\n>>> ").lower()
 
 
+def display_taxi(taxis):
+    for i, taxi in enumerate(taxis):
+        print(f"{i} - {taxi}")
+
 
 main()
