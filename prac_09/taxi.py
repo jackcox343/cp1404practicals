@@ -19,8 +19,10 @@ class Taxi(Car):
         return f"{super().__str__()}, {self.current_fare_distance}km on current fare, ${self.price_per_km:.2f}/km"
 
     def get_fare(self):
-        """Return the price for the taxi trip."""
-        return self.price_per_km * self.current_fare_distance
+        """Return the rounded price for the taxi trip."""
+        fare = self.price_per_km * self.current_fare_distance
+        rounded_fare = round(fare)
+        return round(rounded_fare)
 
     def start_fare(self):
         """Begin a new fare."""

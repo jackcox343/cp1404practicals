@@ -18,7 +18,8 @@ class Car:
         self.fuel += amount
 
     def __str__(self):
-        return f"{self.car_name}, {self.fuel}, {self._odometer}"
+        """Returns formatted string"""
+        return f"{self.car_name}, fuel={self.fuel}, odometer={self._odometer}"
 
     def drive(self, distance):
         """Drive the car a given distance.
