@@ -8,6 +8,7 @@ from prac_09.silver_service_taxi import SilverServiceTaxi
 
 
 def main():
+    """Main function for taxi simulation program"""
     current_taxi = None
     bill_to_date = 0.0
     taxis = [Taxi("Prius", 100), SilverServiceTaxi("Limo", 100, 2), SilverServiceTaxi("Hummer", 200, 4)]
@@ -25,14 +26,18 @@ def main():
                 distance = float(input("Drive how far? "))
                 cost = current_taxi.drive(distance)
                 bill_to_date += cost
-                print(f"Your {current_taxi.name} trip cost you ${cost:.2f}")
+                print(f"Your {current_taxi.car_name} trip cost you ${cost:.2f}")
         else:
             print("Invalid option")
-            choice = input("q)uit, c)hoose taxi, d)rive\n>>> ").lower()
+        print(f"Bill to date: ${bill_to_date}")
+        choice = input("q)uit, c)hoose taxi, d)rive\n>>> ").lower()
+    print(f"Total trip cost: ${bill_to_date:.2f}")
+    print("Taxis are now:")
+    display_taxi(taxis)
 
 
 def choose_taxi(taxis):
-
+    """Chooses valid taxi input"""
     taxi_choice = input("Choose taxi: ")
     try:
         taxi_choice = int(taxi_choice)
@@ -47,6 +52,7 @@ def choose_taxi(taxis):
 
 
 def display_taxi(taxis):
+    """Displays taxis enumerated"""
     for i, taxi in enumerate(taxis):
         print(f"{i} - {taxi}")
 
