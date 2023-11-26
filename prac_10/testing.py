@@ -32,7 +32,6 @@ def run_tests():
     # the test below should fail
     assert repeat_string("hi", 2) == "hi hi"
 
-    # TODO: 1. fix the repeat_string function above so that it passes the failing test
     # Hint: "-".join(["yo", "yo"] -> "yo-yo"
 
     # assert test with custom message,
@@ -47,13 +46,16 @@ def run_tests():
     # You should test both of these
     test_car = Car(fuel=10)
     assert test_car.fuel == 10, "car does not set fuel"
+    test_car = Car(fuel=-1)
+    assert not test_car.fuel == 10
 
 
 run_tests()
 
 # TODO: 3. Uncomment the following line and run the doctests
 # (PyCharm may see your >>> doctest comments and run doctests anyway.)
-# doctest.testmod()
+doctest.testmod()
+
 
 # TODO: 4. Fix the failing is_long_word function
 # (don't change the tests, change the function!)
@@ -67,3 +69,13 @@ run_tests()
 # and one more you decide (one that is valid!)
 # test this and watch the tests fail
 # then write the body of the function so that the tests pass
+def format_phrase(phrase):
+    format_phrase("hello")
+    "Hello."
+    format_phrase("It is an ex parrot")
+    "It is an ex parrot."
+    format_phrase("You got this.")
+    "You got this."
+
+
+doctest.testmod()
